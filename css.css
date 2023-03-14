@@ -7,6 +7,34 @@
     box-sizing: border-box;
 }
 
+@keyframes animate{
+    0%{
+        opacity: 0;
+        z-index: 0;
+        transform: translateY(100%) scale(0.5);
+    }
+    30%{
+        opacity: 0.6;
+        z-index: 1;
+        transform: translateY(70%) scale(0.8);
+    }
+    50%{
+        opacity: 1;
+        z-index: 2;
+        transform: translateY(0%) scale(1);
+    }
+    75%{
+        opacity: 0.6;
+        z-index: 1;
+        transform: translateY(-70%) scale(0.8);
+    }
+    95%{
+        opacity: 0;
+        z-index: 0;
+        transform: translateY(-100%) scale(0.5);
+    }
+}
+
 .wrap{
     
     width: 100%;
@@ -38,17 +66,27 @@
 .card{
     width: 440px;
     height: 250px;
-    position: relative;
+    position: absolute;
     backdrop-filter: blur(5px);
+
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    opacity: 0;
+    animation-play-state: running;
+    animation: animate 5s linear infinite;
+    animation-delay: calc(1s * var(--d));
 }
 
-.rolebg{
+.card .rolebg{
     
-    width: 440px;
-    height: 250px;
+    width: 110%;
+    height: 100%;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.1);
     transform-origin: bottom;
     transition: 0.5s;
 }
@@ -58,9 +96,10 @@
     height: 100%;
     object-fit: cover;
 }
-.role{
-    width: 440px;
-    height: 230px;
+
+.card .role{
+    width: 100%;
+    height: 100%;
     position: absolute;
     bottom: 0px;
     transform-origin: bottom;
@@ -70,7 +109,7 @@
     width: 100%;
     height: 100%;
 }
-.content{
+.card .content{ 
     width: 440px;
     height: 10px;
     color: #fff;
@@ -97,4 +136,9 @@
 .card:hover .content{
     opacity: 1;
     transform: translateY(10px);
+}
+.card:hover{
+    animation-play-state: paused;
+    transform: scale(1);
+    opacity: 1;
 }
