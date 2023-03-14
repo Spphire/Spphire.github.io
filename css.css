@@ -1,0 +1,100 @@
+:root{
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(depth.png) no-repeat;
+    background-size: cover;
+    z-index: -10;
+    
+}
+
+.wrap::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(depth.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        filter: blur(10px);
+        z-index: 0;
+}
+
+.card{
+    width: 440px;
+    height: 250px;
+    position: relative;
+    backdrop-filter: blur(5px);
+}
+
+.rolebg{
+    
+    width: 440px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.05);
+    transform-origin: bottom;
+    transition: 0.5s;
+}
+
+.rolebg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.role{
+    width: 440px;
+    height: 230px;
+    position: absolute;
+    bottom: 0px;
+    transform-origin: bottom;
+    transition: 0.5s;
+}
+.role img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    width: 440px;
+    height: 10px;
+    color: #fff;
+    bottom: -50px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.content h1{
+    font-weight: 200;
+
+}
+.content p{
+    font-weight: 200;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.card:hover .rolebg{
+    transform: perspective(1000px) rotateX(30deg)
+     skewX(-20deg) scale(1.3) translateX(-10px);
+}
+.card:hover .role{
+    transform: scale(1.3) ;
+}
+.card:hover .content{
+    opacity: 1;
+    transform: translateY(10px);
+}
