@@ -69,7 +69,7 @@
      skewX(-20deg) scale(1.3) translateX(-10px);
 }
 .card:hover .role{
-    transform: scale(1.3) ;
+    transform: scale(1.5) ;
 }
 .card:hover .content{
     opacity: 1;
