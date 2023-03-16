@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css.css">
-    <title>card</title>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="card.css">
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: url(images/花园婚纱.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 440px;
+      height: 250px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -250px;
+      margin-top: -150px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      background-color: rgba(0, 0, 0,0);
+      display: block;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="list">
-        <div class="card" style="--d:-2;">
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card">
             <a href="https://Spphire.github.io/RM-labeling-tool/">
                 <div class="rolebg">
                     <img src="images/rolebg.png" alt="">
@@ -21,13 +68,12 @@
             </a>
             <div class="content">
                 <h1>RoboMaster</h1>
-                <p>robomaster labeling tool
-
-                </p>
+                <p>robomaster labeling tool</p>
             </div>
         </div>
-<!-- 
-        <div class="card" style="--d:0;">
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
             <a href="https://Spphire.github.io/RM-labeling-tool/">
                 <div class="rolebg">
                     <img src="images/rolebg.png" alt="">
@@ -38,13 +84,12 @@
             </a>
             <div class="content">
                 <h1>RoboMaster</h1>
-                <p>robomaster labeling tool
-
-                </p>
+                <p>robomaster labeling tool</p>
             </div>
         </div>
-
-        <div class="card" style="--d:2;">
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
             <a href="https://Spphire.github.io/RM-labeling-tool/">
                 <div class="rolebg">
                     <img src="images/rolebg.png" alt="">
@@ -55,14 +100,65 @@
             </a>
             <div class="content">
                 <h1>RoboMaster</h1>
-                <p>robomaster labeling tool
-
-                </p>
+                <p>robomaster labeling tool</p>
             </div>
-        </div> -->
         </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+            <a href="https://Spphire.github.io/RM-labeling-tool/">
+                <div class="rolebg">
+                    <img src="images/rolebg.png" alt="">
+                </div>
+                <div class="role">
+                    <img src="images/role.png" alt="">
+                </div>
+            </a>
+            <div class="content">
+                <h1>RoboMaster</h1>
+                <p>robomaster labeling tool</p>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+            <a href="https://Spphire.github.io/RM-labeling-tool/">
+                <div class="rolebg">
+                    <img src="images/rolebg.png" alt="">
+                </div>
+                <div class="role">
+                    <img src="images/role.png" alt="">
+                </div>
+            </a>
+            <div class="content">
+                <h1>RoboMaster</h1>
+                <p>robomaster labeling tool</p>
+            </div>
+        </div>
+      </div>
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cube",
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: false,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 
 </html>
