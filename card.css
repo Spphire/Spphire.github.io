@@ -49,7 +49,7 @@
 .card .content{ 
     width: 440px;
     height: 10px;
-    color: #fff;
+    color: #333333;
     bottom: -50px;
     opacity: 0;
     transition: 0.5s;
