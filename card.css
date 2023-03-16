@@ -45,6 +45,7 @@
 .role img{
     width: 100%;
     height: 100%;
+    object-fit:cover;
 }
 .card .content{ 
     width: 440px;
@@ -71,6 +72,178 @@
     transform: scale(1.3) ;
 }
 .card:hover .content{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+/*card2*/
+
+.cardyolo{
+    width: 440px;
+    height: 250px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardyolo .yolobg{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    transform-origin: bottom;
+    transition: 0.5s;
+    
+}
+
+.yolobg img{
+
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    
+}
+
+.cardyolo .yolorole{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    transform-origin: bottom;
+    transition: 0.5s;
+    
+}
+.yolorole img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    opacity: 0;
+}
+.cardyolo .yolocontent{ 
+    width: 440px;
+    height: 10px;
+    color: #333333;
+    bottom: -50px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.yolocontent h1{
+    font-weight: 200;
+
+}
+.yolocontent p{
+    font-weight: 200;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.cardyolo:hover .yolobg{
+    transform: perspective(1000px) rotateX(30deg)
+    skewX(-20deg) scale(1.3) translateX(-10px);
+}
+.cardyolo:hover .yolorole{
+    transform: scale(1.3) ;
+}
+.cardyolo:hover .yolorole img{
+    opacity: 1;
+}
+.cardyolo:hover .yolocontent{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+/*card2*/
+
+.mc{
+    width: 440px;
+    height: 250px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mc .mcbg{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    transform-origin: bottom;
+    transition: 0.5s;
+    
+}
+
+.mcbg img{
+
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    
+}
+
+.mc .mcrole{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    transform-origin: bottom;
+    transition: 0.5s;
+    
+}
+.mcrole img{
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+    position: 50% 0%;
+}
+
+.mc .mcparticle{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    transform-origin: bottom;
+    transition: 0.5s;
+    opacity: 0;
+    
+}
+.mcparticle img{
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+    position: 50% 0%;
+}
+
+.mc .mccontent{ 
+    width: 440px;
+    height: 10px;
+    color: #333333;
+    bottom: -50px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.mccontent h1{
+    font-weight: 200;
+
+}
+.mccontent p{
+    font-weight: 200;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.mc:hover .mcbg{
+    transform: perspective(1000px) rotateX(30deg)
+    skewX(-20deg) scale(1.3) translateX(-10px);
+}
+.mc:hover .mcrole{
+    transform: scale(1.3) ;
+}
+.mc:hover .mcparticle
+{
+    transform: scale(1.3) ;
+    opacity: 1;
+}
+.mc:hover .mccontent{
     opacity: 1;
     transform: translateY(10px);
 }
