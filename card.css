@@ -7,7 +7,8 @@
     /* display: flex; */
     justify-content: space-between;
     align-items: center;
-
+    border: 15px solid transparent;
+    
     /* opacity: 0;
     animation-play-state: running;
     animation: animate 5s linear infinite;
@@ -50,26 +51,28 @@
 .card .content{ 
     width: 440px;
     height: 10px;
-    color: #333333;
-    bottom: -50px;
+    position: absolute;
+    bottom: 0px;
     opacity: 0;
     transition: 0.5s;
 }
 .content h1{
+    color: #000;
     font-weight: 200;
 
 }
 .content p{
+    color: #000;
     font-weight: 200;
-    padding-top: 10px;
+    padding-top: 0px;
     font-size: 14px;
 }
 .card:hover .rolebg{
     transform: perspective(1000px) rotateX(30deg)
-     skewX(-20deg) scale(1.3) translateX(-10px);
+     skewX(-20deg) scale(1.3) translateX(-30px);
 }
 .card:hover .role{
-    transform: scale(1.5) ;
+    transform: scale(1.5) translateX(-19px);
 }
 .card:hover .content{
     opacity: 1;
@@ -84,6 +87,7 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
+    border: 15px solid transparent;
 }
 
 .cardyolo .yolobg{
@@ -94,7 +98,6 @@
     overflow: hidden;
     transform-origin: bottom;
     transition: 0.5s;
-    
 }
 
 .yolobg img{
@@ -111,38 +114,40 @@
     position: absolute;
     bottom: 0px;
     transform-origin: bottom;
-    transition: 0.5s;
-    
+    transition: 0.5s;    
 }
 .yolorole img{
     width: 100%;
     height: 100%;
     object-fit:cover;
+    transition: 0.1s;
     opacity: 0;
 }
 .cardyolo .yolocontent{ 
     width: 440px;
     height: 10px;
-    color: #333333;
-    bottom: -50px;
+    position: absolute;
+    bottom: 0px;
     opacity: 0;
     transition: 0.5s;
 }
 .yolocontent h1{
+    color: #000;
     font-weight: 200;
 
 }
 .yolocontent p{
+    color: #000;
     font-weight: 200;
-    padding-top: 10px;
+    padding-top: 0px;
     font-size: 14px;
 }
 .cardyolo:hover .yolobg{
     transform: perspective(1000px) rotateX(30deg)
-    skewX(-20deg) scale(1.3) translateX(-10px);
+    skewX(-20deg) scale(1.3) translateX(-30px);
 }
 .cardyolo:hover .yolorole{
-    transform: scale(1.3) ;
+    transform: scale(1.3) translateX(-19px);
 }
 .cardyolo:hover .yolorole img{
     opacity: 1;
@@ -160,6 +165,7 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
+    border: 15px solid transparent;
 }
 
 .mc .mcbg{
@@ -217,26 +223,34 @@
 .mc .mccontent{ 
     width: 440px;
     height: 10px;
-    color: #333333;
-    bottom: -50px;
+    position: absolute;
+    bottom: 0px;
     opacity: 0;
     transition: 0.5s;
 }
 .mccontent h1{
+    color: #000;
     font-weight: 200;
 
 }
 .mccontent p{
+    color: #000;
     font-weight: 200;
-    padding-top: 10px;
+    padding-top: 0px;
     font-size: 14px;
 }
 .mc:hover .mcbg{
     transform: perspective(1000px) rotateX(30deg)
-    skewX(-20deg) scale(1.3) translateX(-10px);
+    skewX(-20deg) scale(1.3) translateX(-30px);
 }
 .mc:hover .mcrole{
-    transform: scale(1.3) ;
+    transform: scale(1.3) translateX(-19px);
+}
+.mc:hover .mc2role{
+    transform: scale(1.3) translateX(-19px);
+}
+.mc:hover .mc2role img{
+    content: url(images/mc2role1.png);
 }
 .mc:hover .mcparticle
 {
@@ -246,4 +260,21 @@
 .mc:hover .mccontent{
     opacity: 1;
     transform: translateY(10px);
+}
+
+.mc2role{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    transform-origin: bottom;
+    transition: 0.5s;
+    
+}
+.mc2role img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    position: 50% 0%;
+    transform: scale(1.56);
 }
